@@ -1,6 +1,4 @@
-#pragma once
 #include "SDL.h"
-#include<iostream>
 
 class Game {
 public:
@@ -13,13 +11,13 @@ public:
 	SDL_Rect m_sourceRectangle;
 	SDL_Rect m_destinationRectangle;
 	void render();
-	void update() {};
+	void update();
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
-
+	bool m_bRunning;
 private:
 	SDL_Window * m_pWindow;
 	SDL_Renderer *m_pRenderer;
-	bool m_bRunning;
+
 };
